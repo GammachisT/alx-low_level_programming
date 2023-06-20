@@ -9,7 +9,7 @@ int main(void)
 {
 	int count;
 	unsigned long i, j, k;
-	unsigned long a, b, c, carry;
+	unsigned long a, b, c, cary;
 
 	count = 0;
 	i = 0;
@@ -27,9 +27,9 @@ int main(void)
 	j = j / 1000;
 	while (count <= 98)
 	{
-		carry = (a + b) / 1000;
-		c = (a + b) - carry * 1000;
-		k = (i +j) + carry;
+		cary = (a + b) / 1000;
+		c = (a + b) - cary * 1000;
+		k = (i + j) + cary;
 		a = b;
 		b = c;
 		i = j;
@@ -44,4 +44,4 @@ int main(void)
 	}
 	putchar('\n');
 	return (0);
-}	
+}
