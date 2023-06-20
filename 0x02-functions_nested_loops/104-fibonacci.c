@@ -25,10 +25,11 @@ int main(void)
 	i = i / 1000;
 	b = j % 1000;
 	j = j / 1000;
-	while (count <=98)
+	while (count <= 98)
 	{
 		carry = (a + b) / 1000;
 		c = (a + b) - carry * 1000;
+		k = (i +j) + carry;
 		a = b;
 		b = c;
 		i = j;
