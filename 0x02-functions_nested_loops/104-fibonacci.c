@@ -9,7 +9,6 @@ int main(void)
 	int count;
 	unsigned long i, j, k;
 	unsigned long a, b, c, cary;
-
 	count = 0;
 	i = 0;
 	j = 1;
