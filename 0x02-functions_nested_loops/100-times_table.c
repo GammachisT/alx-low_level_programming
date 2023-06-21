@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * print_times_table - prints the times table for n.
  * @n: the multiplication table requested.
@@ -8,7 +7,6 @@
 void print_times_table(int n)
 {
 	int i, j, k;
-
 	if (n >= 0 && n <= 14)
 	{
 		for (i = 0; i <= n; i++)
@@ -16,7 +14,6 @@ void print_times_table(int n)
 			for (j = 0; j <= n; j++)
 			{
 				k = i * j;
-
 				if (k > 99)
 				{
 					_putchar(',');
