@@ -24,7 +24,7 @@ int main(void)
 	i = i / 1000;
 	b = j % 1000;
 	j = j / 1000;
-	while (count <= 99)
+	while (count <= 98)
 	{
 		cary = (a + b) / 1000;
 		c = (a + b) - cary * 1000;
