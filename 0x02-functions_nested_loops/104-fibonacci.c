@@ -13,7 +13,7 @@ int main(void)
 	count = 0;
 	i = 0;
 	j = 1;
-	for (count = 1; count < 92; count++)
+	for (count = 1; count <= 91; count++)
 	{
 		k = i + j;
 		i = j;
@@ -24,7 +24,7 @@ int main(void)
 	i = i / 1000;
 	b = j % 1000;
 	j = j / 1000;
-	while (count < 99)
+	while (count <= 99)
 	{
 		cary = (a + b) / 1000;
 		c = (a + b) - cary * 1000;
