@@ -4,41 +4,43 @@
  *
  * Return: Always 0.
  */
-
 int main(void)
 {
-	unsigned long i;
-	unsigned long bef = 1;
-	unsigned long int aft = 2;
-	unsigned long int l = 1000000000;
-	unsigned long int bef1;
-	unsigned long int bef2;
-	unsigned long int aft1;
-	unsigned long int aft2;
+        int count;
+        unsigned long i, j, k;
+        unsigned long a, b, c, cary;
 
-	printf("%lu", bef);
-
-	for (i = 1; i < 91; i++)
-	{
-		printf(", %lu", aft);
-		aft += bef;
-		bef = aft - bef;
-	}
-
-	bef1 = (bef / l);
-	bef2 = (bef % l);
-	aft1 = (aft / l);
-	aft2 = (aft % l);
-
-	for (i = 92; i < 99; ++i)
-	{
-		printf(", %lu", aft1 + (aft2 / l));
-		printf("%lu", aft2 % l);
-		aft1 = aft1 + bef1;
-		bef1 = aft1 - bef1;
-		aft2 = aft2 + bef2;
-		bef2 = aft2 - bef2;
-	}
-	printf("\n");
-	return (0);
+        count = 0;
+        i = 0;
+        j = 1;
+        for (count = 1; count <= 91; count++)
+        {
+                k = i + j;
+                i = j;
+                j = k;
+                printf("%lu, ", k);
+        }
+        a = i % 1000;
+        i = i / 1000;
+        b = j % 1000;
+        j = j / 1000;
+        while (count <= 98)
+        {
+                cary = (a + b) / 1000;
+                c = (a + b) - cary * 1000;
+                k = (i + j) + cary;
+                a = b;
+                b = c;
+                i = j;
+                j = k;
+                if (c >= 100)
+                        printf("%lu%lu", k, c);
+                else
+printf("%lu0%lu", k, c);
+                if (count != 98)
+                        printf(", ");
+                count++;
+        }
+        putchar('\n');
+        return (0);
 }
