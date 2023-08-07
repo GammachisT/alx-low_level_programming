@@ -3,10 +3,9 @@
 #include "main.h"
 
 /**
- * read_textfile - func that reads a text file and prints it 
+ * read_textfile - func that reads a text file and prints it
  * @filename: variable pointer
- * @letters: size letters
- * 
+ * @letters: size letters 
  * Return: number of letters, 0 otherwise
  */
 
