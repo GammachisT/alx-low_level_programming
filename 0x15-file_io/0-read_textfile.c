@@ -7,7 +7,7 @@
  * prints it to the POSIX standard output.
  * @filename: variable pointer
  * @letters: size letters
- * 
+ *
  * Return: the actual number of letters it could read and print, 0 otherwise
  */
 
