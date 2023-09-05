@@ -6,7 +6,7 @@
  * append_text_to_file - Appends text at the end of a file
  * @filename: variable pointer
  * @text_content: content file
- * 
+ *
  * Return: 1 on success, -1 on failure
  */
 
