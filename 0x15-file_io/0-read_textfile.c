@@ -1,45 +1,40 @@
-#include "main.h"
-#include <unistd.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
+#include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 
 /**
- * read_textfile - reads a text file and prints it to the POSIX standard output
- * @filename: file to read
- * @letters: number of letters it should read and print
+ * read_textfile - reads a text file and prints
+ * @filename: variable pointer
+ * @letters: size letters
  *
- * Return: actual number of letterst
+ * Return: the actual number of letters it could read and print, 0 otherwise
  */
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd;
-	ssize_t lenr, leng;
-	char *buffer;
+	ssize_t file, let, n;
+	char *text;
+
+	text = malloc(letters);
+	if (text == NULL)
+		return (0);
 
 	if (filename == NULL)
 		return (0);
-	fd = open(filename, O_RDONLY);
-	if (fd == -1)
-		return (0);
-	buffer = malloc(sizeof(char) * letters);
-	if (buffer == NULL)
+
+	file = open(filename, O_RDONLY);
+
+	if (file == -1)
 	{
-		close(fd);
+		free(text);
 		return (0);
 	}
-	lenr = read(fd, buffer, letters);
-	close(fd);
-	if (lenr == -1)
-	{
-		free(buffer);
-		return (0);
-	}
-	leng = write(STDOUT_FILENO, buffer, lenr);
-	free(buffer);
-	if (lenr != leng)
-		return (0);
-	return (leng);
+
+	let = read(file, text, letters);
+
+	n = write(STDOUT_FILENO, text, let);
+
+	close(file);
+
+	return (n);
 }
