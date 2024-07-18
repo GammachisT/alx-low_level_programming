@@ -1,30 +1,60 @@
-#include "search_algos.h"
+#ifndef SEARCH_ALGOS_H
+#define SEARCH_ALGOS_H
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+
+/* MANDATORY */
+int linear_search(int *array, size_t size, int value);
+int binary_search(int *array, size_t size, int value);
+
+/* ADVANCED */
+int jump_search(int *array, size_t size, int value);
+int interpolation_search(int *array, size_t size, int value);
+int exponential_search(int *array, size_t size, int value);
+int advanced_binary(int *array, size_t size, int value);
 
 /**
- * linear_search - searches for a value in an array of
- * integers using the Linear search algorithm
+ * struct listint_s - singly linked list
  *
- * @array: input array
- * @size: size of the array
- * @value: value to search for.
+ * @n: Integer
+ * @index: Index of the node in the list
+ * @next: Pointer to the next node
  *
- * If value is not present in array or if array is NULL return -1.
- *
- * Return: first index where value is located.
+ * Description: singly linked list node structure
+ * for Holberton project
  */
 
-int linear_search(int *array, size_t size, int value)
+typedef struct listint_s
 {
-	size_t i;
+	int n;
+	size_t index;
+	struct listint_s *next;
+} listint_t;
 
-	if (!array || size <= 0)
-		return (-1);
+listint_t *jump_list(listint_t *list, size_t size, int value);
 
-	for (i = 0; i < size; i++)
-	{
-		printf("Value checked array[%ld] = [%d]\n", i, array[i]);
-		if (array[i] == value) /* if (*(array + i) == value) */
-			return (i);
-	}
-	return (-1);
-}
+/**
+ * struct skiplist_s - Singly linked list with an express lane
+ *
+ * @n: Integer
+ * @index: Index of the node in the list
+ * @next: Pointer to the next node
+ * @express: Pointer to the next node in the express lane
+ *
+ * Description: singly linked list node structure with an express lane
+ * for Holberton project
+ */
+
+typedef struct skiplist_s
+{
+	int n;
+	size_t index;
+	struct skiplist_s *next;
+	struct skiplist_s *express;
+} skiplist_t;
+
+skiplist_t *linear_skip(skiplist_t *list, int value);
+
+#endif /* SEARCH_ALGOS_H */
