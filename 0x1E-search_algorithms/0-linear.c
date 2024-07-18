@@ -1,60 +1,29 @@
-#ifndef SEARCH_ALGOS_H
-#define SEARCH_ALGOS_H
-
-#include <stdlib.h>
-#include <stdio.h>
-#include <math.h>
-
-/* MANDATORY */
-int linear_search(int *array, size_t size, int value);
-int binary_search(int *array, size_t size, int value);
-
-/* ADVANCED */
-int jump_search(int *array, size_t size, int value);
-int interpolation_search(int *array, size_t size, int value);
-int exponential_search(int *array, size_t size, int value);
-int advanced_binary(int *array, size_t size, int value);
+#include "search_algos.h"
 
 /**
- * struct listint_s - singly linked list
+ * linear_search - searches for a value in an array of integers
  *
- * @n: Integer
- * @index: Index of the node in the list
- * @next: Pointer to the next node
+ * @array: a pointer to the first element of the array to search in
+ * @size: the number of elements in array
+ * @value: the value to search for
  *
- * Description: singly linked list node structure
- * for Holberton project
+ * Return: the first index where value is located or -1 on failure or not found
  */
 
-typedef struct listint_s
+int linear_search(int *array, size_t size, int value)
 {
-	int n;
-	size_t index;
-	struct listint_s *next;
-} listint_t;
+	size_t i = 0;
 
-listint_t *jump_list(listint_t *list, size_t size, int value);
+	if (array)
+	{
+		while (i < size)
+		{
+			printf("Value checked array[%lu] = [%d]\n", i, array[i]);
+			if (array[i] == value)
+				return (i);
+			i++;
+		}
+	}
 
-/**
- * struct skiplist_s - Singly linked list with an express lane
- *
- * @n: Integer
- * @index: Index of the node in the list
- * @next: Pointer to the next node
- * @express: Pointer to the next node in the express lane
- *
- * Description: singly linked list node structure with an express lane
- * for Holberton project
- */
-
-typedef struct skiplist_s
-{
-	int n;
-	size_t index;
-	struct skiplist_s *next;
-	struct skiplist_s *express;
-} skiplist_t;
-
-skiplist_t *linear_skip(skiplist_t *list, int value);
-
-#endif /* SEARCH_ALGOS_H */
+	return (-1);
+}
