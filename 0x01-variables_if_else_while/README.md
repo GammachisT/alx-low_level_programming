@@ -114,14 +114,8 @@ blob/master/1-last_digit_c).
     * Numbers are separated by `,`, followed by a space.
     * Numbers are printed in ascending order.
 
-* **10. 00...99**
-  * [10-print_comb2.c](./10-print_comb2.c): C program that prints the numbers from `00`
-  to `99` using only the `putchar` function exactly five times without any variables of
-  type `char`:
-    * Numbers are separated by `,`, followed by a space.
-    * Numbers are printed in ascending order, with two digits.
 
-* **11. Inventing is a combination of brains and materials. The more brains you use, the less material you need**
+* **10. Inventing is a combination of brains and materials. The more brains you use, the less material you need**
   * [100-print_comb3.c](./100-print_comb3.c): C program that prints all possible different
   combinations of two digits using only the `putchar` function exactly five times without any
   variables of type `char`:
@@ -131,7 +125,7 @@ blob/master/1-last_digit_c).
     * Prints only the smallest combination of two digits.
     * Numbers are printed in ascending order.
 
-* **12. The success combination in business is: Do what you do better... and: do more of what you do...**
+* **11. The success combination in business is: Do what you do better... and: do more of what you do...**
   * [101-print_comb4.c](./101-print_comb4.c): C program that prints all possible different
   combinations of three digits using only the `putchar` function exactly six times without
   any variables of type `char`:
@@ -141,7 +135,7 @@ blob/master/1-last_digit_c).
     * Prints only the smallest combination of three digits.
     * Numbers are printed in ascending order.
 
-* **13. Software is eating the World**
+* **12. Software is eating the World**
   * [102-print_comb5.c](./102-print_comb5.c): C program that prints all possible combinations
   of two-digit numbers using only the `putchar` function exactly eight times without any
   variables of type `char`:
@@ -152,7 +146,7 @@ blob/master/1-last_digit_c).
     * Combinations of numbers are separated by `,`, followed by a space.
     * Combinations of numbers are printed in ascending order.
 ### Repository Details
-- **GitHub Repository:** [alx-low_level_programming](https://github.com/GammachiT/alx-low_level_programming)
+- **GitHub Repository:** [alx-low_level_programming](https://github.com/GammachisT/alx-low_level_programming/tree/master)
 - **Directory:** 0x01-variables_if_else_while
 
 ### Copyright
