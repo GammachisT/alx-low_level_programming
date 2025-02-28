@@ -41,7 +41,7 @@ For this project, we expect you to look at this concept:
 - [while loop in C](https://www.tutorialspoint.com/cprogramming/c_while_loop.htm)
 - [while loop](https://youtu.be/Ju1LYO9pkaI?si=ct-oQNql94MdTJ5a)
   
--[Introduction to C (Basic structure and variables)] (https://youtu.be/LM6IjCbtpZA?si=KpNiHcnk6fWRHawV)
+- [Introduction to C (Basic structure and variables)] (https://youtu.be/LM6IjCbtpZA?si=KpNiHcnk6fWRHawV)
 ### Learning Objectives
 At the end of this project, you should be able to explain:
 - Arithmetic operators and their usage
