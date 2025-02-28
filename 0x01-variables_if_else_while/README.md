@@ -1,4 +1,4 @@
-# SE Foundations
+# <spqn style="color:red;">SE Foundations</span>
 
 ### 0x01. C - Variables, if, else, while
 **Language:** C  
